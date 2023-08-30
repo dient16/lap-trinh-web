@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/register.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form class="form" id="form-register" method="POST" action="register.php">
+        <h3 class="heading">Đăng ký thành viên</h3>
+        <div class="spacer"></div>
+        <div class="form-group">
+          <label for="student_card" class="form-label">Mã sinh viên</label>
+          <input
+            id="student_card"
+            name="student_card"
+            type="text"
+            placeholder="Nhập mã sinh viên"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="fullname" class="form-label">Họ tên</label>
+          <input
+            id="fullname"
+            name="fullname"
+            type="text"
+            placeholder="Nhập họ tên"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input
+            id="email"
+            placeholder="Nhập email"
+            name="email"
+            type="text"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Giới tính</label>
+          <div class="gender-container">
+            <div class="gender-item">
+              <input
+                name="gender"
+                type="radio"
+                value="male"
+                class="form-control"
+              />
+              <span>Nam</span>
+            </div>
+            <div class="gender-item">
+              <input
+                name="gender"
+                type="radio"
+                value="female"
+                class="form-control"
+              />
+              <span>Nữ</span>
+            </div>
+          </div>
+          <span class="form-message"></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Sở thích</label>
+          <div class="hobbies-container">
+            <div class="hobbies-item">
+              <input
+                value="reading_book"
+                name="hobbies[]"
+                type="checkbox"
+                class="form-control"
+              />
+              <span>Đọc sách</span>
+            </div>
+            <div class="hobbies-item">
+              <input
+                value="travel"
+                name="hobbies[]"
+                type="checkbox"
+                class="form-control"
+              />
+              <span>Du lịch</span>
+            </div>
+            <div class="hobbies-item">
+              <input
+                value="music"
+                name="hobbies[]"
+                type="checkbox"
+                class="form-control"
+              />
+              <span> Âm nhạc</span>
+            </div>
+            <div class="hobbies-item">
+              <input
+                value="cuisine"
+                name="hobbies[]"
+                type="checkbox"
+                class="form-control"
+              />
+              <span> Ẩm thực</span>
+            </div>
+            <div class="hobbies-item">
+              <input
+                value="other"
+                name="hobbies[]"
+                type="checkbox"
+                class="form-control"
+              />
+              <span>Khác</span>
+            </div>
+          </div>
+          <span class="form-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="nationality" class="form-label">Quốc tịch</label>
+          <select id="nationality" name="nationality" class="form-control">
+            <option value="" selected>-- Chọn quốc tịch --</option>
+            <option value="VietNam">Việt Nam</option>
+            <option value="UnitedStates">Mỹ</option>
+            <option value="China">China</option>
+          </select>
+          <span class="form-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="note" class="form-label">Ghi chú</label>
+          <textarea
+            id="note"
+            name="note"
+            rows="4"
+            cols="50"
+            class="form-control"
+          ></textarea>
+          <span class="form-message"></span>
+        </div>
+        <button class="form-submit">Đăng ký</button>
+      </form>
+      <script src="./js/register.js"></script>
+    </div>
+  </body>
+</html>

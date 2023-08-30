@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #dbe4f0;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: white;
+  color: #25287b;
+  padding-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+.header p {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #25287b;
+  padding: 0 10px;
+}
+
+/* Định dạng link điều hướng */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.topnav div {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 0;
+  text-decoration: none;
+}
+/* Thay đổi màu liên kết khi di chuột qua */
+.topnav a:hover {
+  background-color: #7085db;
+  color: white;
+}
+
+/* Tạo hai cột không bằng nhau, float cạnh nhau */
+/* Cột trái */
+.leftcolumn {
+  float: left;
+  width: 75%;
+  padding-top: 20px;
+}
+.leftcolumn.home {
+  padding-top: 0px;
+  margin: 20px 0 0 0;
+  margin-left: -15px;
+}
+.order-conatiner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+  gap: 30px;
+}
+.order-conatiner img {
+  width: 25px;
+}
+.order-conatiner .cart {
+  padding: 7px;
+  background: transparent;
+  border: 3px solid #ebaf0b;
+  border-radius: 50%;
+}
+.order-conatiner .order {
+  width: 150px;
+  height: 40px;
+  padding: 10 20px;
+  border: 0;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #ebaf0b;
+  color: white;
+}
+/* Cột phải */
+.rightcolumn {
+  margin-top: 20px;
+  float: left;
+  width: 25%;
+  background-color: #d8e4f4;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Hình ảnh bài viết*/
+.images {
+  width: 90%;
+  height: 230px;
+}
+h2 {
+  font-size: 18px;
+}
+
+/* Thêm định dạng thẻ nội dung thêm */
+.card {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+.card-link {
+  height: 315px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.card-link a {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  padding: 10 20px;
+  border: 0;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #4eaaa5;
+  color: white;
+}
+.card-link a:hover {
+  background-color: #a9dfdc;
+  border: 1px solid black;
+}
+p {
+  text-indent: 20px;
+  text-align: justify;
+}
+
+/* Thêm định dạng thẻ cho bài viết */
+.card-title {
+  height: 55px;
+  border-bottom: 0.5px solid #c4c2c2;
+}
+.card-title h2 {
+  font-size: 16px;
+}
+.price {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 20px;
+  color: #ce2026;
+}
+.card-news {
+  width: 22%;
+  height: 420px;
+  background-color: white;
+  padding: 20px;
+  margin: 0 15px 30px 15px;
+  float: left;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+.card-news a {
+  margin-left: 5%;
+}
+/* Clear float khác sau các cột */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  background: white;
+  margin-top: 10px;
+  height: 60px;
+}
+
+/* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình
+    có chiều rộng dưới 700px */
+@media screen and (max-width: 700px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Bố cục linh hoạt: Thanh menu điều hướng xếp chồng lên nhau thay vì cạnh nhau
+    khi màn hình có chiều rộng dưới 300px */
+@media screen and (max-width: 300px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.detail-container {
+  padding: 70px 30px 0 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.img-detail {
+  width: 600px;
+  height: 600px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border: 1px solid #ebaf0b;
+}
+.card-right {
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 5px 5px 5px;
+  gap: 50px;
+  height: 500px;
+  width: 500px;
+  border-radius: 50px;
+}
+.card-right h2 {
+  margin: 30px 30px 0 30px;
+  font-size: 27x;
+}
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+}
+.quantity_sub,
+.quantity_plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #000;
+  width: 34px;
+  height: 34px;
+  font-size: 25px;
+}
+.size {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.size span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3e3b8;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 5px 20px;
+  outline: none;
+}
+.row.detail {
+  background: #fff;
+}

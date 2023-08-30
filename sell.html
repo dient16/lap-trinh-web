@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell</title>
+    <link rel="stylesheet" href="./css/sell.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <h2 class="title">Bán Hàng</h2>
+
+      <select name="price" id="filter">
+        <option value="0">Chọn mức giá</option>
+        <option value="1">Tất cả</option>
+        <option value="2">Dưới 50</option>
+        <option value="3">Từ 50 đến 80</option>
+        <option value="4">Từ 80 đến 100</option>
+        <option value="5">Trên 100</option>
+      </select>
+
+      <hr />
+      <div class="content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Hàng hóa</th>
+              <th>Đơn giá</th>
+              <th>Số lượng</th>
+              <th>Thành tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" class="check" /></td>
+              <td>Gà rán</td>
+              <td>30</td>
+              <td>
+                <input type="number" value="0" disabled />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="check" /></td>
+              <td>Gà sốt cay</td>
+              <td>60</td>
+              <td>
+                <input type="number" value="0" disabled />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="check" /></td>
+              <td>Mì sốt bò hầm</td>
+              <td>120</td>
+              <td>
+                <input type="number" value="0" disabled />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="check" /></td>
+              <td>Hamburger</td>
+              <td>100</td>
+              <td>
+                <input type="number" value="0" disabled />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="check" /></td>
+              <td>Kem sữa tươi</td>
+              <td>70</td>
+              <td>
+                <input type="number" value="0" disabled />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="check" /></td>
+              <td>Gà rán + pepsi</td>
+              <td>80</td>
+              <td>
+                <input type="number" value="0" disabled />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="check" /></td>
+              <td>Hotdog</td>
+              <td>130</td>
+              <td>
+                <input type="number" value="0" disabled />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="check" /></td>
+              <td>Coca-Cola</td>
+              <td>12</td>
+              <td>
+                <input type="number" value="0" disabled />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="check" /></td>
+              <td>SANDWICH GÀ GIÒN</td>
+              <td>220</td>
+              <td>
+                <input type="number" value="0" disabled />
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="4">Tổng</th>
+              <th id="total"></th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <script src="./js/sell.js"></script>
+  </body>
+</html>

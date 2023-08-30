@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+}
+.main {
+  background: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.form {
+  width: 550px;
+  min-height: 100px;
+  padding: 32px 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 25px;
+  margin: 24px;
+  align-self: center;
+  box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+}
+.form .heading {
+  font-size: 2rem;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+.form-label,
+.form-message {
+  text-align: left;
+}
+
+.form-label {
+  margin-left: 7px;
+  font-weight: 700;
+  padding-bottom: 6px;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.form-control {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #b3b3b3;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-control:hover {
+  border-color: #1dbfaf;
+}
+
+.form-group.invalid .form-control {
+  border-color: #f33a58;
+  background: #ffff00;
+}
+
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
+
+.form-message {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 0 0 7px;
+}
+
+.form-submit {
+  outline: none;
+  height: 45px;
+  text-align: center;
+  width: 450px;
+  border-radius: 40px;
+  background: #1dbfaf;
+  border: 2px solid #1dbfaf;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin: 0 auto;
+}
+
+.form-submit:hover {
+  color: #1dbfaf;
+  background: #fff;
+}
+
+.spacer {
+  margin-top: 36px;
+}
+.form-group.invalid .gender-container,
+.form-group.invalid .hobbies-container {
+  background: #ffff00;
+}
+.gender-container,
+.hobbies-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  gap: 10px;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid rosybrown;
+}
+#note {
+  height: 70px;
+}
+.gender-item,
+.hobbies-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 15px;
+  height: 42px;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #dfdfdf;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid currentColor;
+  border-radius: 2.4px;
+  transform: translateY(-1.2px);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 15.4px 15.4px #302f30;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 2.4px) solid currentColor;
+  outline-offset: max(2px, 2.4px);
+}
